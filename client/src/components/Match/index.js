@@ -1,25 +1,28 @@
 import React from "react";
 import './styles.css'
-import Load from "../Load";
 
-function Match() {
+function Match(props) {
+    const { records } = props
     return (
-        <div className="match">
-            <Load />
-            <h2>Rodada 5</h2>
+        <div className="match">            
+            <h2>{`Rodada ${records[0].matchday}`}</h2>
             <table>
-                <tr>
-                    <td>logo</td>
-                    <td><b>Time 1</b></td>
-                    <td className="result">0</td>
-                    <td className="vs">x</td>
-                    <td className="result">0</td>
-                    <td><b>Time 2</b></td>
-                    <td>logo</td>
-                </tr>
+                <tbody>
+                {records.map((record, i) => (
+                    <tr key={i}>
+                        <td><img src={record.homeTeam.crest} width={30} alt={record.homeTeam.name} /></td>
+                        <td className="team-name"><b>{record.homeTeam.name}</b></td>
+                        <td className="result">{record.score.fullTime.home ?? 0}</td>
+                        <td>x</td>
+                        <td className="result">{record.score.fullTime.away ?? 0}</td>
+                        <td className="team-name"><b>{record.awayTeam.name}</b></td>
+                        <td><img src={record.awayTeam.crest} width={30} alt={record.awayTeam.name} /></td>
+                    </tr>
+                ))}
+                </tbody>
             </table>
 
-            <p>10 jogos da quinta rodada</p>
+            <p>{`${records.length} jogos da ${records[0].matchday}º rodada`}</p>
         </div>
     )
 }

@@ -4,8 +4,8 @@ import './styles.css'
 
 function Home() {
     return (
-      <div class="home">
-        <Link className="btn-matches" to="matches">Clique para ver os jogos da rodada</Link>
+      <div className="home">
+        <Link className="btn-matches" to="matches">Clique para ver os jogos da 5º rodada</Link>
       </div>
     )
 }

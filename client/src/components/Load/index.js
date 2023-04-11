@@ -3,7 +3,7 @@ import './styles.css'
 
 function Load() {
     return (
-        <span class="loader"></span>
+        <span className="loader"></span>
     )
 }
 

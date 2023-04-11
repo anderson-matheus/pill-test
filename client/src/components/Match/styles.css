@@ -16,9 +16,12 @@ table {
     background-color: #162e58;
     padding: 10px;
     border-radius: 10px;
+    float: left;
+    margin-bottom: 50px;
+    height: 900px;
 }
 
-table:hover, tr:hover {
+tr:hover {
     background-color: #637481;
     cursor: pointer;
 }
@@ -39,7 +42,7 @@ p {
     border-radius: 10px;
     width: 15%;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 450px;
 }
 
 .result {
@@ -47,4 +50,19 @@ p {
     background-color: #fff;
     text-align: center;
     width: 10px;
+}
+
+.team-name {
+    width: 250px;
+}
+
+@media screen and (max-width: 1024px) {
+    table {
+        width: 100%;
+    }
+
+    p {
+        width: 100%;
+        margin-top: 0;
+    }
 }

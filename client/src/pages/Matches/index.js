@@ -1,29 +1,31 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Match from "../../components/Match";
 
-function Matches() {
-    // const [backendData, setBackendData] = useState([{}])
+import Load from "../../components/Load";
 
-    // useEffect(() => {
-    //     fetch("/api").then(
-    //     response => response.json()
-    //     ).then(
-    //     data => {
-    //         setBackendData(data)
-    //     }
-    //     )
-    // }, [])
+function Matches() {
+    const [records, setRecords] = useState([])
+
+    useEffect(() => {
+        fetch("/api/matches").then(
+            response => response.json()
+        ).then(
+            data => {
+                setRecords(data)
+            }
+        ).catch((error) => {
+            console.log(error)
+            setRecords([])
+        })
+    }, [])
 
     return (
         <div>
-            <Match />
-            {/* {(typeof backendData.users === 'undefined') ? (
-                <p>Loading...</p>
+            {(records.length === 0) ? (
+                <Load />
             ) : (
-                backendData.users.map((user, i) => (
-                    <p key={i}>{user}</p>
-                ))
-            )} */}
+                <Match records={records} />
+            )}
         </div>
     )
 }
