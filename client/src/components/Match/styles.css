@@ -1,0 +1,50 @@
+.match {
+    width: 90%;
+    margin: 0 5%;
+}
+
+h2 {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+table {
+    color: #fff;
+    border: 0;
+    width: 80%;
+    background-color: #162e58;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+table:hover, tr:hover {
+    background-color: #637481;
+    cursor: pointer;
+}
+
+td {
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    float: right;
+    color: #fff;
+    font-weight: bolder;
+    text-transform: uppercase;
+    background-color: #3c4043;
+    padding: 10px;
+    border-radius: 10px;
+    width: 15%;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.result {
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+    width: 10px;
+}

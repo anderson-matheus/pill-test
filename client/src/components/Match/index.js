@@ -1,15 +1,20 @@
 import React from "react";
+import './styles.css'
+import Load from "../Load";
 
 function Match() {
     return (
-        <div>
+        <div className="match">
+            <Load />
             <h2>Rodada 5</h2>
             <table>
                 <tr>
                     <td>logo</td>
-                    <td>Time 1</td>
-                    <td>x</td>
-                    <td>Time 2</td>
+                    <td><b>Time 1</b></td>
+                    <td className="result">0</td>
+                    <td className="vs">x</td>
+                    <td className="result">0</td>
+                    <td><b>Time 2</b></td>
                     <td>logo</td>
                 </tr>
             </table>
